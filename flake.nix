@@ -14,13 +14,13 @@
     let
     lib = nixpkgs.lib;
       # TODO make this cross platform
-      system = "aarch64-darwin";
+      system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
     in {
       homeConfigurations = {
         mwyerman = home-manager.lib.homeManagerConfiguration {
-	  inherit pkgs;
-	  modules = [
+          inherit pkgs;
+          modules = [
 	    ./home.nix
 	  ];
 	};

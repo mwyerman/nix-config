@@ -53,5 +53,6 @@ return {
 		lspconfig.rust_analyzer.setup({})
 		lspconfig.jsonls.setup({})
     lspconfig.yamlls.setup({})
+    lspconfig.tsserver.setup({})
 	end,
 }

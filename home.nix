@@ -2,7 +2,8 @@
 
 {
   home.username = "mwyerman";
-  home.homeDirectory = "/Users/mwyerman";
+  # home.homeDirectory = "/Users/mwyerman";
+  home.homeDirectory = if pkgs.stdenv.isDarwin then "/Users/mwyerman" else "/home/mwyerman";
 
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
@@ -19,6 +20,10 @@
 
     # dev
     pkgs.rustup
+    pkgs.nodePackages.nodejs
+    pkgs.nodePackages.pnpm
+    pkgs.nodePackages.typescript-language-server
+    pkgs.turbo
   ];
 
   imports = [ ./packages ];
