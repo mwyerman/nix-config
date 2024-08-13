@@ -23,7 +23,10 @@
     pkgs.nodePackages.nodejs
     pkgs.nodePackages.pnpm
     pkgs.nodePackages.typescript-language-server
-    pkgs.turbo
+
+    # compilers/interpreters
+    pkgs.python3
+    pkgs.python3Packages.virtualenv
   ];
 
   imports = [ ./packages ];
