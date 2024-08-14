@@ -23,11 +23,15 @@
     pkgs.nodePackages.nodejs
     pkgs.nodePackages.pnpm
     pkgs.nodePackages.typescript-language-server
+    pkgs.clang
+    pkgs.automake
+    pkgs.autoconf
+    pkgs.libtool
 
     # compilers/interpreters
     pkgs.python3
     pkgs.python3Packages.virtualenv
-    pkgs.clang
+    pkgs.cpputest
   ];
 
   imports = [ ./packages ];
